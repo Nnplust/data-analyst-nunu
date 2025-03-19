@@ -8,6 +8,7 @@ Exploratory Data Analysis for Academic Hiring Process
 
 ## 🎯 Objective
 - Retrieve raw data from an S3 bucket and register it in the AWS Glue Data Catalog using a crawler.
+- Retrieve the system Log file from the Web Server to analyze. 
 - Process the data through the AWS Glue ETL (Extract, Transform, Load) pipeline:
   - Extract data from the Data Catalog.
   - Transform the data using AWS Glue.
@@ -40,10 +41,10 @@ Below is the **architecture diagram** illustrating the data flow from raw data i
   5) Add a Report Date.
   6) Convert timestamps to the local time zone.
   7) Modify schema (rename/remove columns).
+  8) Transform Data 
   8.1) **System-Friendly Format** – Store in **S3 with partitions** based on the Report Date and other attributes (optional).
   8.2) **User-Friendly Format** – Store in **S3 without partitions**.
-
-![ETL Process](https://github.com/user-attachments/assets/b4798c9e-3d74-4395-a02d-eb572ce6625c)
+  ![PIPELINE](https://github.com/user-attachments/assets/4eba6992-3ab7-4b60-98d1-326cc6dcfa32)
 
 ### **3. Data Storage, Partitioning & Processing:**
 - **System-Friendly Data Storage:** Processed data is stored in an **S3 bucket** with partitioning.
