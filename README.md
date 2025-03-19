@@ -19,7 +19,7 @@ The ETL process is structured as follows:
 ![image](https://github.com/user-attachments/assets/ea4387fd-441b-45f8-9420-44b4bc253fec)
 
 ### **2️⃣ Faculty List - ETL Workflow**
-- **ETL processing for faculty hiring and allocation**
+- **ETL processing for faculty hiring**
 - **Export to System & User**
 
 ![image](https://github.com/user-attachments/assets/0db53c53-d691-4b04-8e7a-3e7180206e81)
