@@ -155,73 +155,98 @@ Extract, Transform, and Load (ETL) processes are used to summarize and prepare t
 ✔️ **Structured dataset stored in AWS S3** for easy access and further analysis.
 ✔️ **Data pipeline implementation in AWS Glue** for automated processing and reporting.
 
-## 📊 Data Wrangling
+# 🌟 Data Wrangling for Academic Internal Hiring Process
 
 ## 📌 Project Description
-This section focuses on **Data Wrangling for Academic Hiring Data** to clean, standardize, and prepare datasets for analysis.
+Data wrangling focuses on cleaning, transforming, and structuring raw hiring process data for the academic department. This ensures data accuracy, consistency, and readiness for analysis, helping streamline internal hiring decisions.
 
 ## 📌 Project Title
-Data Wrangling for Academic Hiring Data
+Data Wrangling for Academic Internal Hiring Process Data Cleaning
 
-## 🎯 Objective
-- Extract, clean, and transform hiring-related data for consistency.
-- Standardize datasets by handling missing values and inconsistencies.
-- Format the data to be analysis-ready for further processing.
-
-## 📊 Dataset
-The dataset includes:
-- **Raw Hiring Data:** Candidate, faculty, and position data.
-- **Transformed Data:** Cleaned and structured versions of hiring records.
-- **Metadata:** Schema definitions and column transformations applied.
+## 🎯 Objectives
+- Extract raw hiring process data and prepare it for analysis.
+- Standardize and clean the dataset to remove inconsistencies.
+- Structure data for efficient storage and retrieval.
 
 ## 🔍 Methodology
-1. **Data Cleaning:** Remove duplicates, handle missing values, and standardize formats.
-2. **Transformation:** Apply column renaming, data type conversions, and feature engineering.
-3. **Exporting:** Store the processed dataset in S3 for downstream analysis.
+
+Below is the **architecture diagram** illustrating the data flow for data wrangling in AWS, specifically designed for the academic department's internal hiring process:
+Below is the **architecture diagram** illustrating the data flow for data wrangling in AWS, covering all methodology steps:
+![{EAD7BEA0-381C-43F4-83E0-C55D4A7191CF}](https://github.com/user-attachments/assets/87f17c97-15cb-4474-a672-377d49d65ac3)
+
+
+### Step 1: Data Extraction
+- Retrieve raw budget data from AWS S3.
+- Load data into AWS Glue for further processing.
+
+### Step 2: Data Cleaning
+- Remove null values from key columns .
+- Standardize column formats and naming conventions.
+- Trim white spaces from all string values. And Clean Data has been stored to S3 buckets.
+  ![{B005063C-3B47-4C7B-A90E-A328F659F1FC}](https://github.com/user-attachments/assets/880978f1-137d-424f-a8ea-286c8c8fa446)
+  ![image](https://github.com/user-attachments/assets/fcd97bf2-eb65-4281-8d7c-8d7b821851d6)
+
+
+### Step 3: Data Storage & Preparation
+- Store structured datasets in AWS S3 for further analysis and perform Lifecycle rules
+![image](https://github.com/user-attachments/assets/e0739b38-d8fc-419f-b7d0-9deade5dc78c)
 
 ## ⚙️ Tools and Technologies
-- **Processing:** Python (Pandas, NumPy), AWS Glue
-- **Storage:** AWS S3
+- **ETL & Data Processing**: AWS DataBrew
+- **Storage**: AWS S3 for structured data
 
 ## 📦 Deliverables
-✔️ **Standardized datasets** for hiring analysis.
-✔️ **Improved data integrity** for accurate reporting.
-✔️ **ETL-ready structured data** stored in S3.
-
+✔️ **Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
 ---
 
-## 📊 Data Quality Control
+# 🌟 Data Quality Control for Academic Internal Hiring Process
 
 ## 📌 Project Description
-This section focuses on **Data Quality Control for Academic Hiring Data** to ensure accuracy, consistency, and completeness in datasets.
+Data Quality Control ensures that the academic hiring process dataset is accurate, consistent, and reliable. This step involves validating, monitoring, and enforcing data integrity to support data-driven decision-making in the hiring process.
 
 ## 📌 Project Title
-Data Quality Control for Academic Hiring Data
+Data Quality Control for Academic Internal Hiring Process
 
-## 🎯 Objective
-- Implement data validation and quality checks for hiring datasets.
+## 🎯 Objectives
+- Implement data validation and quality checks for academic hiring datasets.
 - Ensure data consistency across candidate, faculty, and position records.
-- Monitor data integrity and enforce business rules.
-
-## 📊 Dataset
-The dataset includes:
-- **Candidate Records:** Verified applicant data.
-- **Faculty Data:** Validated faculty hiring details.
-- **Position Listings:** Checked job openings for completeness.
+- Monitor data integrity and enforce business rules to maintain high data quality.
 
 ## 🔍 Methodology
-1. **Data Validation:** Apply schema checks, uniqueness constraints, and missing value detection.
-2. **Quality Assurance:** Ensure data consistency through cross-record validation.
-3. **Error Logging & Monitoring:** Track data issues and discrepancies for resolution.
+
+Below is the **architecture diagram** illustrating the data quality control process for the academic department's internal hiring data:
+
+![{67E0BCEC-41DB-4917-8038-7E74F21200E1}](https://github.com/user-attachments/assets/778a2115-32d5-454b-9414-4956ca90f4fa)
+
+
+### Step 1: Data Quality Check 
+### Step 1: Data Quality Check & Segregation
+- Apply schema checks to verify column structures and data types.
+- Detect and handle missing values or incomplete records.
+- Ensure uniqueness constraints for key attributes.
+- Identify and remove duplicate records.
+- Standardize naming conventions across datasets.
+  ![image](https://github.com/user-attachments/assets/3ba0ea7f-d71b-4860-8630-1023ceb5449a)
+- **If data passes quality checks**, store it in the **S3 Success Bucket**.
+  ![image](https://github.com/user-attachments/assets/1f4e59cd-e3fc-4e4d-8eb0-a8f6fc6fa5f4)
+- **If data fails quality checks**, move it to the **S3 Fail Bucket** for further review.
+  ![image](https://github.com/user-attachments/assets/9c77f589-1f4f-4a59-9300-7e058e6b901c)
+
+
+### Step 2: Error Logging & Monitoring
+- Maintain an audit trail for historical data changes.
+- Minitor using AWS Cloud Watch
+  ![image](https://github.com/user-attachments/assets/e4a193eb-858d-4e46-9b2b-37dae8755fdd)
+
 
 ## ⚙️ Tools and Technologies
-- **Validation Tools:** AWS Glue DataBrew, SQL
-- **Monitoring:** AWS CloudWatch for data integrity tracking
+- **Validation & Quality Checks**: AWS Glue DataBrew
+- **Storage**: AWS S3 for structured and validated data
 
 ## 📦 Deliverables
-✔️ **Validated and clean hiring data** for accurate reporting.
-✔️ **Automated data quality checks** for ongoing integrity.
-✔️ **Error logging system** for continuous data monitoring.
+✔️ **Validated and clean academic hiring data** to ensure reliability.
+✔️ **Error logging ** for detecting data anomalies.
+✔️ **Consistent and structured dataset** for accurate hiring analysis.
 
 ## 🏆 Course Completion Badge
 View my certification on Credly: [AWS Academy Badge](https://www.credly.com/badges/e38a26fc-9fa7-4b12-b664-be39a41932c7/public_url)
