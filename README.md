@@ -67,6 +67,8 @@ Below is the **architecture diagram** illustrating the data flow from raw data i
 ✔️ **AWS cloud integration** for log management and data storage.
 ✔️ **System architecture documentation** outlining the ETL process.
 
+----
+
 # 🌟 Descriptive Analysis for City Budget
 
 ## 📌 Project Description
@@ -155,6 +157,7 @@ Extract, Transform, and Load (ETL) processes are used to summarize and prepare t
 ✔️ **Structured dataset stored in AWS S3** for easy access and further analysis.
 ✔️ **Data pipeline implementation in AWS Glue** for automated processing and reporting.
 
+----
 # 🌟 Data Wrangling for Academic Internal Hiring Process
 
 ## 📌 Project Description
@@ -197,7 +200,7 @@ Below is the **architecture diagram** illustrating the data flow for data wrangl
 
 ## 📦 Deliverables
 ✔️ **Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
----
+-----
 
 # 🌟 Data Quality Control for Academic Internal Hiring Process
 
