@@ -43,7 +43,8 @@ Below is the **architecture diagram** illustrating the data flow from raw data i
   8.1) **System-Friendly Format** – Store in **S3 with partitions** based on the Report Date and other attributes (optional).
   8.2) **User-Friendly Format** – Store in **S3 without partitions**.
 
-![ETL Process](https://github.com/user-attachments/assets/b4798c9e-3d74-4395-a02d-eb572ce6625c)
+![ETLPIPELINE2](https://github.com/user-attachments/assets/b8fac526-9f8e-434d-bc0c-3bc52d8e2846)
+
 
 ### **3. Data Storage, Partitioning & Processing:**
 - **System-Friendly Data Storage:** Processed data is stored in an **S3 bucket** with partitioning.
@@ -143,7 +144,8 @@ Extract, Transform, and Load (ETL) processes are used to summarize and prepare t
 - **Data Loading**:
   - Store processed data in the **system for internal use**.
   - Convert into a single file for **user-friendly access** and load into the final destination.
- ![image](https://github.com/user-attachments/assets/71ee2130-8194-458a-8fd7-e59d53ff56fb)
+
+![ETLPIPELINE4Assignment](https://github.com/user-attachments/assets/783c0f8c-a603-4cd4-b34d-7c1fa60e338b)
 
 ## ⚙️ Tools and Technologies
 - **ETL & Data Processing**: AWS Glue, AWS DataBrew, SQL
@@ -221,14 +223,14 @@ Below is the **architecture diagram** illustrating the data quality control proc
 ![{67E0BCEC-41DB-4917-8038-7E74F21200E1}](https://github.com/user-attachments/assets/778a2115-32d5-454b-9414-4956ca90f4fa)
 
 
-### Step 1: Data Quality Check 
 ### Step 1: Data Quality Check & Segregation
 - Apply schema checks to verify column structures and data types.
 - Detect and handle missing values or incomplete records.
 - Ensure uniqueness constraints for key attributes.
 - Identify and remove duplicate records.
 - Standardize naming conventions across datasets.
-  ![image](https://github.com/user-attachments/assets/3ba0ea7f-d71b-4860-8630-1023ceb5449a)
+  ![ETLPIPELINE3Assignment](https://github.com/user-attachments/assets/ff268337-5e58-4333-b969-aa453f49893e)
+
 - **If data passes quality checks**, store it in the **S3 Success Bucket**.
   ![image](https://github.com/user-attachments/assets/1f4e59cd-e3fc-4e4d-8eb0-a8f6fc6fa5f4)
 - **If data fails quality checks**, move it to the **S3 Fail Bucket** for further review.
