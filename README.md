@@ -254,4 +254,3 @@ View my certification on Credly: [AWS Academy Badge](https://www.credly.com/badg
 ## 📞 Contact
 [GitHub Profile](https://github.com/Nnplust) | [LinkedIn](https://linkedin.com/in/nu-nu-tun)
 
-This project presents an efficient approach to **managing academic hiring data**, streamlining decision-making, and optimizing recruitment processes.
