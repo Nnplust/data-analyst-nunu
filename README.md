@@ -200,7 +200,7 @@ Below is the **architecture diagram** illustrating the data flow for data wrangl
 - **Storage**: AWS S3 for structured data
 
 ## 📦 Deliverables
-✔️ **Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
+✔️ Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
 -----
 
 # 🌟 Data Quality Control for Academic Internal Hiring Process
