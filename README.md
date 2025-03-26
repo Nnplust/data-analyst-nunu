@@ -248,7 +248,7 @@ Below is the **architecture diagram** illustrating the data quality control proc
 
 ## 📦 Deliverables
 ✔️ **Validated and clean academic hiring data** to ensure reliability.
-✔️ **Error logging ** for detecting data anomalies.
+✔️ **Error logging** for detecting data anomalies.
 ✔️ **Consistent and structured dataset** for accurate hiring analysis.
 
 ## 🏆 Course Completion Badge
