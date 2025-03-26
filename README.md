@@ -178,7 +178,6 @@ Below is the **architecture diagram** illustrating the data flow for data wrangl
 Below is the **architecture diagram** illustrating the data flow for data wrangling in AWS, covering all methodology steps:
 ![{EAD7BEA0-381C-43F4-83E0-C55D4A7191CF}](https://github.com/user-attachments/assets/87f17c97-15cb-4474-a672-377d49d65ac3)
 
-
 ### Step 1: Data Extraction
 - Retrieve raw budget data from AWS S3.
 - Load data into AWS Glue for further processing.
@@ -200,7 +199,7 @@ Below is the **architecture diagram** illustrating the data flow for data wrangl
 - **Storage**: AWS S3 for structured data
 
 ## 📦 Deliverables
-✔️ Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
+✔️ **Cleaned and structured academic hiring dataset** ready for analysis together with lifecycling policy.
 -----
 
 # 🌟 Data Quality Control for Academic Internal Hiring Process
